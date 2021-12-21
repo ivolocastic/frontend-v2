@@ -28,9 +28,10 @@ export default class RpcProviderService {
   }
 
   public getJsonProvider(networkKey: Network): JsonRpcProvider {
-    const rpcUrl = `${this.config.getNetworkConfig(networkKey).rpc}/${
-      this.config.env.INFURA_PROJECT_ID
-    }`;
+    // const rpcUrl = `${this.config.getNetworkConfig(networkKey).rpc}/${
+    //   this.config.env.INFURA_PROJECT_ID
+    // }`;
+    const rpcUrl = 'https://rpc.testnet.moonbeam.network';
     return new JsonRpcProvider(rpcUrl);
   }
 }
